@@ -52,3 +52,50 @@ st.dataframe(
         "total_score": "{:.1f}"
     })
 )
+# ===============================
+# AUTOMATIC PORTFOLIO BUILDER
+# ===============================
+
+st.header("🧩 Automatic Portfolio Builder")
+
+portfolio_type = st.selectbox(
+    "Select investment phase",
+    ["Growth Phase", "Transition Phase", "Paycheque Phase"]
+)
+
+if portfolio_type == "Growth Phase":
+    target_categories = ["Growth"]
+    max_weight = 0.20
+
+elif portfolio_type == "Transition Phase":
+    target_categories = ["Growth", "Balanced", "Income"]
+    max_weight = 0.15
+
+else:
+    target_categories = ["Income", "Real Assets", "Balanced"]
+    max_weight = 0.12
+
+portfolio_df = df[df["category"].isin(target_categories)].copy()
+
+if portfolio_df.empty:
+    st.warning("No ETFs available for this portfolio type.")
+else:
+    portfolio_df["weight"] = 1 / len(portfolio_df)
+    portfolio_df["weight"] = portfolio_df["weight"].clip(upper=max_weight)
+    portfolio_df["weight"] = portfolio_df["weight"] / portfolio_df["weight"].sum()
+
+    st.subheader("📊 Suggested Portfolio Allocation")
+    st.dataframe(
+        portfolio_df[["ticker", "category", "distribution_yield", "weight"]]
+        .sort_values("weight", ascending=False)
+        .style.format({
+            "distribution_yield": "{:.2%}",
+            "weight": "{:.1%}"
+        })
+    )
+
+    portfolio_yield = (
+        portfolio_df["distribution_yield"] * portfolio_df["weight"]
+    ).sum()
+
+    st.metric("Estimated Portfolio Yield", f"{portfolio_yield:.2%}")
