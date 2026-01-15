@@ -99,3 +99,45 @@ else:
     ).sum()
 
     st.metric("Estimated Portfolio Yield", f"{portfolio_yield:.2%}")
+# ===============================
+# PAYCHEQUE REPLACEMENT SIMULATOR
+# ===============================
+
+st.header("💰 Paycheque Replacement Simulator")
+
+initial_capital = st.number_input(
+    "Initial investment ($)",
+    min_value=0,
+    value=100000,
+    step=5000
+)
+
+monthly_contribution = st.number_input(
+    "Monthly contribution ($)",
+    min_value=0,
+    value=1000,
+    step=100
+)
+
+years = st.slider("Investment horizon (years)", 1, 30, 10)
+
+expected_growth = st.slider(
+    "Expected annual growth (%)",
+    0.0, 15.0, 7.0
+) / 100
+
+future_value = initial_capital
+for _ in range(years):
+    future_value = future_value * (1 + expected_growth) + (monthly_contribution * 12)
+
+st.metric("Projected Portfolio Value", f"${future_value:,.0f}")
+
+# Use Paycheque Phase yield if available
+income_yield = portfolio_yield if "portfolio_yield" in locals() else 0.05
+
+annual_income = future_value * income_yield
+monthly_income = annual_income / 12
+
+st.metric("Projected Annual Income", f"${annual_income:,.0f}")
+st.metric("Projected Monthly Paycheque", f"${monthly_income:,.0f}")
+st.metric("Yield on Cost", f"{income_yield:.2%}")
