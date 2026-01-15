@@ -1,0 +1,11 @@
+ticker,distribution_yield,expense_ratio,asset_class
+VDY.TO,0.044,0.22,Canadian Equity Income
+XEI.TO,0.046,0.22,Canadian Equity Income
+ZDV.TO,0.045,0.39,Dividend Equity
+VRE.TO,0.041,0.39,REIT
+XRE.TO,0.043,0.61,REIT
+ZWB.TO,0.066,0.72,Covered Call Banks
+ZWC.TO,0.074,0.72,Covered Call Energy
+HYLD.TO,0.085,0.65,Global Income
+HDIV.TO,0.071,0.65,Multi-Asset Income
+TXF.TO,0.094,0.65,Tech Covered Call
