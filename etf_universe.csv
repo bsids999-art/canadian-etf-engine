@@ -1,0 +1,56 @@
+ticker,name,category
+XIU.TO,iShares S&P/TSX 60,Broad Market
+VCN.TO,Vanguard FTSE Canada All Cap,Broad Market
+ZCN.TO,BMO S&P/TSX Capped Composite,Broad Market
+
+VDY.TO,Vanguard FTSE Canadian High Dividend,Dividend
+XEI.TO,iShares TSX High Dividend,Dividend
+XDV.TO,iShares Canadian Select Dividend,Dividend
+CDZ.TO,iShares Canadian Dividend Aristocrats,Dividend Growth
+DGRC.TO,CI Quality Dividend Growth,Dividend Growth
+
+ZWC.TO,BMO Canadian High Dividend Covered Call,Income
+ZWU.TO,BMO Covered Call Utilities,Income
+ZWK.TO,BMO Covered Call Banks,Income
+TXF.TO,CI Tech Giants Covered Call,Income
+HHL.TO,Harvest Healthcare Leaders Income,Income
+
+ZRE.TO,BMO Equal Weight REITs,Real Assets
+XRE.TO,iShares Canadian REIT,Real Assets
+
+VFV.TO,Vanguard S&P 500 (CAD),Growth
+ZSP.TO,BMO S&P 500 (CAD),Growth
+XUS.TO,iShares S&P 500 (CAD),Growth
+
+XAW.TO,iShares Core Global Equity,Growth
+VXC.TO,Vanguard FTSE Global All Cap,Growth
+
+QQC.F.TO,Invesco NASDAQ 100 (CAD),Growth
+TEC.TO,BMO Global Technology,Growth
+
+ZDV.TO,BMO Canadian Dividend,Dividend
+PDC.TO,Invesco Canadian Dividend,Dividend
+
+FIE.TO,iShares Canadian Financial Monthly Income,Income
+DFN.TO,Dividend 15 Split Corp,Income
+ENS.TO,E Split Corp,Income
+
+XTR.TO,iShares Diversified Monthly Income,Income
+ZMI.TO,BMO Monthly Income,Income
+
+HUTL.TO,Harvest Global Utilities,Real Assets
+CIF.TO,CI Canadian REIT ETF,Real Assets
+
+VRE.TO,Vanguard Canadian REIT,Real Assets
+ZUT.TO,BMO Equal Weight Utilities,Real Assets
+
+HXQ.TO,Horizons NASDAQ 100,Growth
+HXS.TO,Horizons S&P 500,Growth
+
+XEF.TO,iShares Core MSCI EAFE,Growth
+XEC.TO,iShares Core MSCI Emerging Markets,Growth
+
+ZDY.TO,BMO US Dividend,Dividend
+VGG.TO,Vanguard US Dividend Appreciation,Dividend Growth
+
+XDIV.TO,iShares Core MSCI Canadian Quality Dividend,Dividend
